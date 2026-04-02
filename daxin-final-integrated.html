@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>大心不動產經紀社</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; background: linear-gradient(180deg, #f7f4ee 0%, #f8f5f0 18%, #fbfaf7 42%, #ffffff 70%, #fcfbf8 100%); color: #1f2937; position: relative; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 28px 24px 36px; }
+    .card { background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.6); border-radius: 32px; box-shadow: 0 20px 55px rgba(15,23,42,.10); padding: 24px; backdrop-filter: blur(6px); position: relative; overflow: hidden; }
+    .hero { text-align: center; padding: 28px; border-radius: 34px; background: rgba(255,255,255,.95); border: 1px solid rgba(255,255,255,.25); box-shadow: 0 28px 90px rgba(15,23,42,.16); margin-bottom: 32px; position: relative; overflow: hidden; }
+    h1 { margin: 0 0 10px; font-size: 42px; font-weight: 800; letter-spacing: .08em; background: linear-gradient(90deg, #111827, #57534e, #b45309); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .sub1 { font-size: 20px; font-weight: 700; color: #374151; margin: 8px 0 4px; letter-spacing: .14em; }
+    .sub2 { font-size: 17px; color: #6b7280; margin: 8px 0 0; letter-spacing: .04em; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 36px; }
+    h2 { margin: 0 0 12px; font-size: 28px; color: #292524; text-align: center; letter-spacing: .06em; }
+    input, select { width: 100%; border: 1px solid rgba(214,211,209,.9); background: rgba(255,255,255,.98); border-radius: 18px; padding: 16px; font-size: 18px; margin-bottom: 14px; outline: none; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+    input:focus, select:focus { border-color: #d97706; box-shadow: 0 0 0 3px rgba(253, 230, 138, .45); }
+    
+label { display: block; font-size: 18px; margin: 10px 0; }
+.check-item { display:flex; align-items:center; gap:16px; border:1px solid rgba(254, 226, 226, 1); background:rgba(255,255,255,.82); border-radius:20px; padding:16px; box-shadow:0 2px 8px rgba(15,23,42,.04); }
+.check-item input[type="checkbox"] { -webkit-appearance:none; appearance:none; width:24px; height:24px; border-radius:8px; border:2px solid #fca5a5; background:#fff; display:inline-grid; place-content:center; margin:0; flex:0 0 auto; }
+.check-item input[type="checkbox"]::before { content:""; width:12px; height:12px; transform:scale(0); transition:120ms transform ease-in-out; clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%); background:white; }
+.check-item input[type="checkbox"]:checked { border-color:#b91c1c; background:linear-gradient(135deg,#b91c1c,#f97316); }
+.check-item input[type="checkbox"]:checked::before { transform:scale(1); }
+.check-item span { font-weight:600; color:#334155; }
+
+    .btn { width: 100%; border: none; border-radius: 18px; padding: 18px; font-size: 19px; font-weight: 800; letter-spacing: .06em; color: white; background: linear-gradient(90deg, #292524, #b45309, #f59e0b); box-shadow: 0 14px 28px rgba(180,83,9,.22); cursor: pointer; }
+    .line-box { text-align: center; padding: 24px; border-radius: 32px; border: 1px solid rgba(209,250,229,.95); background: rgba(255,255,255,.92); box-shadow: 0 20px 55px rgba(15,23,42,.10); margin-bottom: 24px; position: relative; overflow: hidden; }
+    .line-link { color: #16a34a; font-size: 30px; font-weight: 800; text-decoration: underline; }
+    .qr { width: 176px; height: 176px; border-radius: 20px; border: 4px solid #22c55e; background: white; padding: 8px; margin-top: 18px; box-shadow: 0 8px 18px rgba(0,0,0,.1); }
+    .line-hint { color: #15803d; font-size: 18px; font-weight: 700; margin-top: 12px; }
+    .footer { text-align: center; padding: 24px; border-radius: 32px; border: 1px solid rgba(209,250,229,.95); background: rgba(255,255,255,.92); box-shadow: 0 20px 55px rgba(15,23,42,.10); font-size: 22px; line-height: 1.8; position: relative; overflow: hidden; }
+    .line-id { color: #16a34a; font-weight: 800; }
+    .float-line { position: fixed; right: 18px; bottom: 18px; background: #22c55e; color: white; text-decoration: none; padding: 14px 22px; border-radius: 999px; font-size: 18px; font-weight: 800; box-shadow: 0 10px 20px rgba(0,0,0,.18); }
+    @media (max-width: 768px) { .wrap { padding: 16px; } .grid { grid-template-columns: 1fr; gap: 20px; } h1 { font-size: 31px; line-height: 1.28; } h2 { font-size: 24px; } .line-link { font-size: 24px; } .footer { font-size: 18px; } .btn { font-size: 18px; } .hero, .card, .line-box, .footer { border-radius: 28px; } }
+  </style>
+</head>
+<body>
+
+  <div style="pointer-events:none;position:fixed;inset:0;z-index:0;">
+    <div style="position:absolute;left:0;right:0;top:0;height:28rem;background:radial-gradient(circle at top, rgba(180,83,9,.10), transparent 46%);"></div>
+    <div style="position:absolute;left:0;right:0;top:0;height:18rem;background:linear-gradient(180deg, rgba(15,23,42,.05) 0%, rgba(255,255,255,0) 100%);"></div>
+    <div style="position:absolute;top:0;bottom:0;left:0;width:18rem;background:radial-gradient(circle at left, rgba(120,113,108,.05), transparent 55%);"></div>
+    <div style="position:absolute;top:0;bottom:0;right:0;width:18rem;background:radial-gradient(circle at right, rgba(180,83,9,.05), transparent 55%);"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:6rem;background:linear-gradient(180deg, rgba(250,245,235,0) 0%, rgba(245,235,220,.55) 100%);"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <div class="hero"><div style="position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#fbbf24,#7f1d1d,#f59e0b);"></div><div style="position:absolute;top:-64px;right:-48px;height:160px;width:160px;border-radius:999px;background:rgba(253,230,138,.25);filter:blur(40px);"></div><div style="position:absolute;top:-32px;left:-32px;height:128px;width:128px;border-radius:999px;background:rgba(254,202,202,.25);filter:blur(40px);"></div>
+      <h1>林哲緯｜房地產顧問</h1>
+      <div class="sub1">大心不動產經紀社｜專營雲林不動產</div>
+      <div style="width:84px;height:1px;background:linear-gradient(90deg,transparent,#d97706,transparent);margin:12px auto 10px;"></div><div class="sub2">雲林縣斗六市漢口路218號1樓</div><div style="font-size:12px;letter-spacing:.42em;color:rgba(180,83,9,.88);margin-top:14px;">LUXURY ESTATE ・ COUNTRY LAND</div>
+    </div>
+
+    <div class="grid">
+      <div class="card"><div style="position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#7f1d1d,#f59e0b,#7f1d1d);"></div>
+        <h2>您想找甚麼物件?</h2><div style="font-size:13px;line-height:1.7;color:#78716c;margin:-6px 0 14px;text-align:center;">填寫需求後，會直接帶入 LINE 訊息給我。</div>
+        <div style="margin-bottom:12px;"><div style="font-size:13px;font-weight:700;letter-spacing:.08em;color:#57534e;margin:0 0 8px;">稱呼</div><input id="buy_name" placeholder="請輸入稱呼"></div>
+        <div style="margin-bottom:12px;"><div style="font-size:13px;font-weight:700;letter-spacing:.08em;color:#57534e;margin:0 0 8px;">想找的物件類型</div><input id="buy_type" placeholder="例：公寓、透天、農地、建地"></div>
+        <div style="margin-bottom:12px;"><div style="font-size:13px;font-weight:700;letter-spacing:.08em;color:#57534e;margin:0 0 8px;">預算</div><input id="buy_budget" placeholder="例：800萬、1200萬、可談"></div>
+        <div style="margin-bottom:12px;"><div style="font-size:13px;font-weight:700;letter-spacing:.08em;color:#57534e;margin:0 0 8px;">聯絡方式</div><input id="buy_contact" placeholder="手機 / LINE / 方便聯絡方式"></div>
+        <button class="btn" onclick="sendBuy()">送出需求</button>
+      </div>
+
+      <div class="card"><div style="position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#7f1d1d,#f59e0b,#7f1d1d);"></div>
+        <h2>您想賣什麼物件？</h2><div style="font-size:13px;line-height:1.7;color:#78716c;margin:-6px 0 14px;text-align:center;">可填房屋地址或土地地段地號，資料越完整越好。</div>
+        <div style="margin-bottom:12px;"><div style="font-size:13px;font-weight:700;letter-spacing:.08em;color:#57534e;margin:0 0 8px;">稱呼</div><input id="sell_name" placeholder="請輸入稱呼"></div>
+        <div style="margin-bottom:12px;"><div style="font-size:13px;font-weight:700;letter-spacing:.08em;color:#57534e;margin:0 0 8px;">物件類型</div><select id="sell_type">
+          <option value="">物件類型</option>
+          <option>農地</option>
+          <option>公寓</option>
+          <option>透天</option>
+          <option>建地</option>
+          <option>工業建地</option>
+          <option>其他</option>
+        </select></div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:.08em;color:#57534e;margin:2px 0 8px;">想了解的內容</div>
+        <label class="check-item"><input type="checkbox" id="need_price"><span>詢問附近實價登錄行情</span></label>
+        <label class="check-item"><input type="checkbox" id="need_tax"><span>粗估應繳稅額</span></label>
+        <div style="margin-top:14px;"><div style="font-size:13px;font-weight:700;letter-spacing:.08em;color:#57534e;margin:0 0 8px;">土地 / 物件位置</div><input id="sell_location" placeholder="土地位置 例：雲林縣斗六市○○段○○地號"><div style="font-size:13px;line-height:1.7;color:#78716c;margin-top:6px;">可直接填寫鄉鎮市、地段、地號；若是房屋，也可填門牌地址。</div></div><div style="margin-top:14px;"><div style="font-size:13px;font-weight:700;letter-spacing:.08em;color:#57534e;margin:0 0 8px;">聯絡方式</div><input id="sell_contact" placeholder="手機 / LINE / 方便聯絡方式"></div>
+        <button class="btn" onclick="sendSell()">送出賣屋需求</button>
+      </div>
+    </div>
+
+    <div class="line-box"><div style="position:absolute;left:0;right:0;bottom:0;height:96px;background:linear-gradient(180deg,rgba(187,247,208,0) 0%,rgba(134,239,172,.45) 100%);"></div><div style="position:absolute;left:0;right:0;bottom:40px;height:40px;opacity:.3;background:repeating-linear-gradient(90deg, rgba(34,197,94,.16) 0, rgba(34,197,94,.16) 28px, transparent 28px, transparent 56px);"></div>
+      <a class="line-link" href="https://line.me/R/ti/p/qdGwFGksVm" target="_blank" rel="noreferrer">加 LINE 快速聯絡</a>
+      <div><img class="qr" src="data:image/png;base64,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" alt="LINE QR Code"></div>
+      <div class="line-hint">掃描 QR Code 或點上方連結加入 LINE</div><div style="font-size:13px;color:#78716c;margin-top:6px;">手機可直接點上方連結，電腦可掃描 QR Code。</div>
+    </div>
+
+    <div class="footer"><div style="position:absolute;left:0;right:0;bottom:0;height:80px;background:linear-gradient(180deg,rgba(220,252,231,0) 0%,rgba(134,239,172,.38) 100%);"></div><div style="position:absolute;left:0;right:0;bottom:28px;height:32px;opacity:.25;background:repeating-linear-gradient(90deg, rgba(34,197,94,.16) 0, rgba(34,197,94,.16) 30px, transparent 30px, transparent 60px);"></div>
+      <div>電話：0929-359-999</div>
+      <div class="line-id">LINE：0929359999</div>
+      <div>經紀人證號（97）登字第00119號</div>
+      <div>營業員證號（112）登字第433203號</div>
+    </div>
+  </div>
+
+  <a class="float-line" href="https://line.me/R/ti/p/qdGwFGksVm" target="_blank" rel="noreferrer">LINE</a>
+
+  <script>
+    function sendBuy() {
+      const name = document.getElementById('buy_name').value || '未填寫';
+      const type = document.getElementById('buy_type').value || '未填寫';
+      const budget = document.getElementById('buy_budget').value || '未填寫';
+      const contact = document.getElementById('buy_contact').value || '未填寫';
+      const msg = `您好，我想找房：\n稱呼：${name}\n想找的物件：${type}\n預算：${budget}\n聯絡方式：${contact}`;
+      window.open(`https://line.me/R/msg/text/?${encodeURIComponent(msg)}`, '_blank');
+    }
+    function sendSell() {
+      const name = document.getElementById('sell_name').value || '未填寫';
+      const type = document.getElementById('sell_type').value || '未填寫';
+      const needs = [];
+      if (document.getElementById('need_price').checked) needs.push('詢問附近實價登錄行情');
+      if (document.getElementById('need_tax').checked) needs.push('粗估應繳稅額');
+      const location = document.getElementById('sell_location').value || '未填寫';
+      const contact = document.getElementById('sell_contact').value || '未填寫';
+      const msg = `您好，我想賣屋：\n稱呼：${name}\n物件類型：${type}\n土地 / 物件位置：${location}\n需求：${needs.length ? needs.join('、') : '未填寫'}\n聯絡方式：${contact}`;
+      window.open(`https://line.me/R/msg/text/?${encodeURIComponent(msg)}`, '_blank');
+    }
+  </script>
+</body>
+</html>
